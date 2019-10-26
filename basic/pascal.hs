@@ -11,6 +11,18 @@ e.g:
 
 Blanca, Granada 26/X/19
 -}
+
+
+-- PASCAL VERSION 2 --
+
+pascal2  = [1] : map f pascal2
+  where f xs = zipWith (+) (0: xs) ( xs ++ [0])
+  
+pascalShow s = putStrLn (unlines (map show (take s pascal2)))
+
+
+
+-- PASCAL VERSIÓN 1 -- 
 -- read number from standar input 
 getInt :: IO Int
 getInt = do
