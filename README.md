@@ -8,10 +8,12 @@ Haskell program to learn and practise haskell languaje
 Todos sabíamos que este momento acabaría llegando, lo que yo desconocía es que el ingenuo interés hacia lo desconocido se tornaría en un romance pasional. 
 Hasta el momento tengo escrito:
 
-Nombre  |  Descripción  
+File | Description  
 ---	| ---  
-Haskell_básico   | Mis conocimientos, plasmados de manera esquemática  
-<a href="básicos"> básicos | Carpeta con programas básicos  
+[Haskell_básico](./haskell_básico.md)   | Basic introducction of the languaje (in Spanish) 
+ [basic](./basic)| programs that show interesting aspecs of the languaje
+ [quite simple start](./quite_simpe_start) | my first programs   
+ 
 
 
 
