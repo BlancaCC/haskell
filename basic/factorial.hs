@@ -12,6 +12,6 @@ factorial2 = fact' 1 (1:[1..])
   where fact'  p (x:xs) = q : fact' q xs
          where q = p*x
 
-          
+factoria3 :: [Integer]         
 factorial3 = map (head) (iterate (fact'') (1:[1..]))
   where fact'' (p:x:xs) = (p*x):xs
