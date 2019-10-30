@@ -1,11 +1,15 @@
 {-
- Basis definition a tree 
+ Basis definition a tree and some basic functions to understand better the concept
+
+Granada 30/X/19 
   -}
+
+---- Structure or data definition ----
 
 data Tree a = Void | Node a [ Tree a] deriving Show
 
 
-----      Example of declaration ----
+----  Example of declaration ----
 t0 :: Tree Integer
 t0 = Node 0[t1,t2,t3]
   where
@@ -13,7 +17,7 @@ t0 = Node 0[t1,t2,t3]
     t2 = Node 2 [Node 20[]]
     t3 = Node 3 []
 
--- empty three (using void constructor
+-- empty tree (using void constructor)
 emptyThree :: Tree Integer
 emptyThree = Void
 
@@ -47,7 +51,7 @@ isLeaf :: Tree a -> Bool
 isLeaf ( Node _ []) = True
 isLeaf _ = False
 
--- Find the maximum element of the three
+-- Find the maximum element of the tree
 tMaximum :: Ord  a => Tree a -> a
 tMaximum Void = error "Empty tree"
 tMaximum (Node x []) = x
