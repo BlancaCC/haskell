@@ -13,8 +13,8 @@ File | Description
 [Haskell_básico](./haskell_básico.md)   | Basic introducction of the languaje (in Spanish) 
  [basic](./basic)| programs that show interesting aspects of the languaje
  [quite simple start](./quite_simpe_start) | my first programs   
- [tree](./tree) | tree data structure  
- 
+ [tree](./trees) | tree data structure  
+ [sort algorithms](./sortAlgorithms) | Sort algorithms in haskell  
 
 
 
