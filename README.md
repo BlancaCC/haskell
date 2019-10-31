@@ -13,6 +13,7 @@ File | Description
 [Haskell_básico](./haskell_básico.md)   | Basic introducction of the languaje (in Spanish) 
  [basic](./basic)| programs that show interesting aspects of the languaje
  [quite simple start](./quite_simpe_start) | my first programs   
+ [foldr](./foldr.hs) | understand of foldr function and derivates as scanr and foldl  
  [tree](./trees) | tree data structure  
  [sort algorithms](./sortAlgorithms) | Sort algorithms in haskell  
 
