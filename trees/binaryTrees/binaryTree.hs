@@ -8,27 +8,20 @@ Funtions:
 
 
 Example:
-*Main> drawBinTree (listToBinTree [1..10]) 0
+*Main> drawBinTree (listToBinTree [1..6]) 0
 |
 |-1
   |
   |-2
     |
     |-4
-      |
-      |-8
     |
     |-6
-      |
-      |-10
   |
   |-3
     |
     |-5
-      |
-      |-9
-    |
-    |-7
+
 
 Date: Granda 3/X/19
 -}
@@ -55,22 +48,20 @@ isInBinT a (Node n l r)
 
 
 
--- part a list
-partList :: [a] -> [a]
-partList [] = []
-partList (x:[])= x:[]
-partList (x:_:[]) = [x]
-partList (x:_:xs) = x:(partList xs)
-
-
 -- create a BinTree from a list
 listToBinTree :: [a] -> BinTree a
 listToBinTree [] = VoidB
 listToBinTree (x:xs) = Node x (listToBinTree (partList xs)) (listToBinTree (partList (drop 1 xs)))
+  where partList :: [a] -> [a]
+        partList [] = []
+        partList (x:[])= x:[]
+        partList (x:_:[]) = [x]
+        partList (x:_:xs) = x:(partList xs)
 
 
   
 -- draw Tree
+space :: Int -> [Char]
 space rep = take (2*rep) (repeat ' ')
   
 drawBinTree VoidB _ = putStr ""

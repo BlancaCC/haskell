@@ -1,4 +1,4 @@
-# haskell
+# Haskell
 Haskell program to learn and practise haskell languaje
 
 
@@ -14,7 +14,7 @@ File | Description
  [basic](./basic)| programs that show interesting aspects of the languaje
  [quite simple start](./quite_simpe_start) | my first programs   
  [foldr](./foldr.hs) | understand of foldr function and derivates as scanr and foldl  
- [tree](./trees) | tree data structure  
+ [tree](./trees) | tree data structure, binay trees... 
  [sort algorithms](./sortAlgorithms) | Sort algorithms in haskell  
 
 

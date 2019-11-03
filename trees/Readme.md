@@ -5,4 +5,6 @@ A tree is an acyclic graph or in another words an  acyclic data structure with a
 topic | file  
 --- | ---  
 Definition and basic functions | [treeDefinion](./treeDefinition.hs)  
+Binary trees and some functions | [binary trees](./binaryTrees/)  
+
 
