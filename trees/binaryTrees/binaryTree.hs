@@ -36,7 +36,7 @@ bt :: BinTree Integer
 bt = Node 0 (Node 1 VoidB VoidB) VoidB
 
 
----- other function -----
+---- others functions -----
 
 -- determinate if a is in a BinTree
 
@@ -89,4 +89,10 @@ drawBinTree t = drawBinTreeAux t 0
     -- where  
     space :: Int -> [Char]
     space rep = take (2*rep) (repeat ' ')
+
+-- acces to de n elements (star at 0, as a normal array)
+(!) :: BinTree a -> Int -> a
+(Node x _ _)! 0 = x
+(Node _ l r)! n = if even n then r! (n `div` 2) else l! (n `div` 2)
+_ ! _ = error "Not valid position"
 
