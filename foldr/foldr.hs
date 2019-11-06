@@ -7,10 +7,12 @@ There is a recurrent patter that appears frecuently
 -}
 
 --- example of patter that appears frecuently ---
+-- sum the element of a list 
 mySum :: Num a => [a] -> a 
 mySum [] = 0
 mySum (x:xs) =(+) x  (mySum xs)
 
+-- concat a list caracters to string 
 myConcat [] = []
 myConcat (x:xs) = x <> (myConcat xs)
 
