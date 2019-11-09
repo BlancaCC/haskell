@@ -36,7 +36,7 @@ bt :: BinTree Integer
 bt = Node 0 (Node 1 VoidB VoidB) VoidB
 
 t = listToBinTree[0..]  -- infinite tree
-
+ft x = listToBinTree[0..x]
 
 ---- others functions -----
 
@@ -123,5 +123,76 @@ drawBinTree t = drawBinTreeAux t 0
 
 
 
+{---- TREE TRAVERSAL ----}
+{-
+Examples:
+t = listToBinTree [1..6]
+Node 1 (Node 2 (Node 4 VoidB VoidB) (Node 6 VoidB VoidB)) (Node 3 (Node 5 VoidB VoidB) VoidB)
+
+   1
+  /  \
+ 2    3
+/ \  /
+4 6 5
+
+*Main> preorderToList t
+[1,2,4,6,3,5]
+*Main> inorderToList t
+[4,2,6,1,5,3]
+*Main> postorderToList t
+[4,6,2,5,3,1]
+*Main> breadthFirstToList t
+[1,2,3,4,6,5]
+-}
+
+preorderToList :: BinTree a -> [a]
+preorderToList VoidB = []
+preorderToList (Node n l r) = n : (preorderToList l) <> (preorderToList r)
+
+
+inorderToList :: BinTree a -> [a]
+inorderToList VoidB = []
+inorderToList (Node n l r) = (inorderToList l) <> [n] <> (inorderToList r)
+
+
+postorderToList :: BinTree a -> [a]
+postorderToList VoidB = []
+postorderToList (Node n l r) = (postorderToList l) <> (postorderToList r) <> [n]
+
+breadthFirstToList :: BinTree a -> [a]
+breadthFirstToList t = quitMaybe (auxBreadth [t])
+
+
+-- auxiliar functions of breadthFirstToList
+
+auxBreadth :: [BinTree a] -> [Maybe a]
+auxBreadth [] = []
+auxBreadth trees = nodes <> auxBreadth subtrees
+  where
+    (nodes,subtrees) = split trees
+
+
+split :: [BinTree a] -> ([Maybe a],[BinTree a])
+split trees = (x , concat y)
+  where
+    (x,y) = unzip[(giveNode t, giveChildren t)|t <- trees]
+    
+giveNode :: BinTree a -> Maybe a
+giveNode VoidB = Nothing
+giveNode (Node n _ _) = Just n
+
+giveChildren :: BinTree a -> [BinTree a]
+giveChildren VoidB = []
+giveChildren (Node _ VoidB VoidB) = []
+giveChildren (Node _ l VoidB ) = [l]
+giveChildren (Node _ VoidB r) = [r]
+giveChildren (Node _ l r) = [l,r]
+
+
+
+quitMaybe :: [Maybe a] -> [a]
+quitMaybe [] = []
+quitMaybe (Just a:xs) = a : quitMaybe xs
+quitMaybe (Nothing:xs) = quitMaybe xs
 
 

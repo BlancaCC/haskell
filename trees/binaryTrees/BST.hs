@@ -57,6 +57,10 @@ insertBST2 t e = insertBST e t
 Node 1 VoidB (Node 2 VoidB (Node 3 VoidB VoidB))
 -}
 
+-- tree
 
+preorderToList :: BinT a -> [a]
+preorderToList VoidB = []
+preorderToList (Node n l r) = n: (preorderToList l) <> (preorderToList r)
 
 
