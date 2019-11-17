@@ -176,11 +176,13 @@ split :: [BinTree a] -> ([Maybe a],[BinTree a])
 split trees = (x , concat y)
   where
     (x,y) = unzip[(giveNode t, giveChildren t)|t <- trees]
-    
+
+-- give the element of a node or Nothing
 giveNode :: BinTree a -> Maybe a
 giveNode VoidB = Nothing
 giveNode (Node n _ _) = Just n
 
+-- children to a list
 giveChildren :: BinTree a -> [BinTree a]
 giveChildren VoidB = []
 giveChildren (Node _ VoidB VoidB) = []
