@@ -27,3 +27,6 @@ Nombre    	 			    | Descripción
 Razonando con Haskell. Un curso sobre programación funcional | Este es un libro de texto, escrito por B.C.Ruiz, F. Gutiérrez, P. Guerrero y J. E. Gallardo. En mi caso lo he tomado en préstamo de la ETSIIT de Granada. Está orientado a alumnaos de física y matemáticas con excasos conocimientos informáticos.  
 [Hackerrank](https://www.hackerrank.com)    | Famosísima wed altamente recomendada para aprender y bichear qué hacen otros con puntuaciones desorbitadas, no solo en programación funcional.  
  Real World Haskell; O'Reilly  by Bryan O'Sullivan and John Goerzen Don Stewart | A book for my university library   
+[fpComplete](https://tech.fpcomplete.com/haskell/learn) | company that works with haskell and it has made some tutorials  
+
+ 

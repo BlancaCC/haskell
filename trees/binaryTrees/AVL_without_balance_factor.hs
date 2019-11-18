@@ -11,13 +11,13 @@ Blanca
 
 -- Structure definition
 
-data AVL a = Void | Node a Int (AVL a) (AVL a) deriving Show
+data AVL a = Void | Node a (AVL a) (AVL a) deriving Show
 
 lr :: AVL Integer
-lr = Node 2 1 (Node 1 0 Void Void) (Node 4 0 (Node 3 0 Void Void) (Node 5 0 Void Void))
+lr = Node 2 (Node 1 Void Void) (Node 4 (Node 3 Void Void) (Node 5 Void Void))
 
 rr :: AVL Integer
-rr = Node 4 -1 (Node 2 0 (Node 1 Void Void) (Node 3 Void Void)) (Node 5 Void Void)
+rr = Node 4 (Node 2 (Node 1 Void Void) (Node 3 Void Void)) (Node 5 Void Void)
 
 -- ROTATIONS
 

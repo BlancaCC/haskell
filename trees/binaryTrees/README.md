@@ -9,3 +9,6 @@ File | Description
 [Self Balancing trees (AVL)](./AVS.hs) | Definition and basics functions  
 
 
+References: 
+-  https://en.wikipedia.org/wiki/AVL_tree
+
